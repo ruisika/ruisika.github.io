@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://ruisika.github.io/</loc>
-         <lastmod>2025-11-04</lastmod>
+         <loc>https://ruisika.github.io/apiscan/</loc>
+         <lastmod>2025-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ruisika.github.io/xunxing/QA/</loc>
+         <lastmod>2025-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ruisika.github.io/xunxing/callme/</loc>
+         <lastmod>2025-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ruisika.github.io/xunxing/faq/</loc>
+         <lastmod>2025-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ruisika.github.io/xunxing/intro/</loc>
+         <lastmod>2025-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ruisika.github.io/xunxing/pointpay/</loc>
+         <lastmod>2025-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ruisika.github.io/xunxing/realExample/</loc>
+         <lastmod>2025-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ruisika.github.io/xunxing/use/</loc>
+         <lastmod>2025-11-05</lastmod>
     </url>
 </urlset>
