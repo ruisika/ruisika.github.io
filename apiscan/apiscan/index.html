@@ -959,6 +959,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../mingjing/use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    平台使用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../mingjing/update/" class="md-nav__link">
         
   
@@ -1133,6 +1156,7 @@
 <p>一个go语言开发的js文件发现和接口扫描工具，专门用于从JavaScript文件中提取API接口信息并进行安全测试。</p>
 <p>欢迎大家对比评测，如果爬取的js文件或者路径没别的工具爬的多随时与我联系，我看看这么个事。<br />
 说快速是假的涉及到太多js文件的时候也会很慢，规则大部分来自熊猫头，所以一般的话熊猫头能看到该工具也没问题，如果熊猫头能行我的不行，求求你联系我，我看看这么个事。  </p>
+<p>实际测试是公开的js扫描或者说网站文件扫描最强的工具 下面命令会有新添加的 但是太懒了建议还是-h进行学习</p>
 <h2 id="_1">🚀 功能特性</h2>
 <ul>
 <li><strong>🔍 智能API发现</strong>: 自动从JavaScript文件中提取API端点路径</li>
@@ -1161,7 +1185,7 @@ JSAPIscan.exe -u https://example.com -t 20 -d 5
 
 </code></pre>
 <h3 id="_5">高级用法</h3>
-<pre><code class="language-bash"># 启用自动接口测试（-auto 是未授权访问检测 不加只会爬取）
+<pre><code class="language-bash"># 启用自动接口测试（-auto 是未授权访问检测 不加只会爬取 在大量url慎用下面的 或者你真的时间充裕）
 JSAPIscan.exe -u https://example.com -auto
 
 # 携带参数进行测试
@@ -1186,13 +1210,13 @@ JSAPIscan.exe -f urls.txt -auto -t 15 -d 4
 <tbody>
 <tr>
 <td><code>-u</code></td>
-<td>目标URL</td>
+<td>目标 URL</td>
 <td>-</td>
 <td><code>-u https://example.com</code></td>
 </tr>
 <tr>
 <td><code>-f</code></td>
-<td>URL文件路径</td>
+<td>URL 文件路径</td>
 <td>-</td>
 <td><code>-f urls.txt</code></td>
 </tr>
@@ -1216,13 +1240,13 @@ JSAPIscan.exe -f urls.txt -auto -t 15 -d 4
 </tr>
 <tr>
 <td><code>-aparms</code></td>
-<td>携带参数测试</td>
+<td>携带参数进行测试（用于接口参数化）</td>
 <td>false</td>
 <td><code>-aparms</code></td>
 </tr>
 <tr>
 <td><code>-apoc</code></td>
-<td>启用POC测试</td>
+<td>启用 POC（Proof of Concept）测试</td>
 <td>false</td>
 <td><code>-apoc</code></td>
 </tr>
@@ -1234,7 +1258,7 @@ JSAPIscan.exe -f urls.txt -auto -t 15 -d 4
 </tr>
 <tr>
 <td><code>-sc</code></td>
-<td>不显示相关状态码</td>
+<td>不显示相关状态码（隐藏输出的状态码）</td>
 <td>""</td>
 <td><code>-sc</code></td>
 </tr>
@@ -1248,7 +1272,31 @@ JSAPIscan.exe -f urls.txt -auto -t 15 -d 4
 <td><code>-k</code></td>
 <td>只输出关键信息</td>
 <td>false</td>
-<td>``</td>
+<td><code>-k</code></td>
+</tr>
+<tr>
+<td><code>-p</code></td>
+<td>设置代理</td>
+<td>-</td>
+<td><code>-p http://127.0.0.1:8080</code></td>
+</tr>
+<tr>
+<td><code>-pa</code></td>
+<td>只对测试接口未授权进行使用代理</td>
+<td>false</td>
+<td><code>-pa</code></td>
+</tr>
+<tr>
+<td><code>-gjca</code></td>
+<td>在原有的敏感字段基础上添加更多字段</td>
+<td>""</td>
+<td><code>-gjca /upload,密码</code></td>
+</tr>
+<tr>
+<td><code>-gjc</code></td>
+<td>只使用指定的敏感字段进行匹配</td>
+<td>""</td>
+<td><code>-gjc /upload</code></td>
 </tr>
 </tbody>
 </table>

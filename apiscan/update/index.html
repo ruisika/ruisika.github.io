@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#v0292-251113" class="md-skip">
+        <a href="#v04-251122" class="md-skip">
           跳转至
         </a>
       
@@ -822,6 +822,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../mingjing/use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    平台使用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../mingjing/update/" class="md-nav__link">
         
   
@@ -879,9 +902,33 @@
 
 
 
+<h1 id="v04-251122">V0.4 251122</h1>
+<p>优化代码逻辑（感觉api测试应该不如上一版，尤其是当用户输入的是http://test.com/wms/api 这种带路径的，v0.3很好就解决的v0.4可能悬了。因为改了很多逻辑但是发包量大幅下降。关键我测试的几个站没啥问题。）</p>
+<p>优化了-o html 使其不那么鸡肋 在大批量资产我还是建议txt 然后开个python服务放bp上看</p>
+<p>添加目录遍历漏洞的<strong>被动</strong>检测</p>
+<p>添加-basepath来设定基础路径</p>
+<p><img alt="image-20251122164753371" src="../assets/image-20251122164753371.png" /></p>
+<p>添加-maxreq来设定单个url最大爬取js数量  -maxhtml 单个url最多html请求数量（有些网站是狗吧纯静态这种真没必要爬取 现在很少有网站使用html来写前端了）</p>
+<p><img alt="image-20251122164815892" src="../assets/image-20251122164815892.png" /></p>
+<p>添加- gorog 使用gorog库来实现类似于chromdp的效果不过会下载chrome 也就是他这个库所以导致文件大小激增 当然你也可以不下载 默认是关闭的</p>
+<p><img alt="image-20251123102932491" src="../assets/image-20251123102932491.png" /></p>
+<h1 id="v03-251114">V0.3 251114</h1>
+<p>优化代码逻辑</p>
+<p>增强网站爬虫能力尤其对非vue站点</p>
+<p>新添加xss检测（只有当使用-apoc 才会扫描）</p>
+<p>新添加-aget 只使用get请求测试接口 其实-auto就是get </p>
+<p>只不过你要用-apoc或者-aparms的时候它会走流程 get+url+参数-&gt;postjson-&gt;post url 如果使用了-aget 只会进行geturl?key=value</p>
+<p>批量扫描慎用-apoc 有些站点会提取出来很多很多参数 然后在加上它的请求头最多只能是4096会一直一直发包</p>
 <h1 id="v0292-251113">V0.29.2 251113</h1>
 <p>添加新的匹配uedit还有前端时间遇到的一些
 添加mac版本</p>
+<p>添加下述功能</p>
+<ol>
+<li>-p: 设置代理，格式为 http://IP:PORT</li>
+<li>-pa: 布尔值，如果设置为true，则只对测试接口未授权时使用代理</li>
+<li>-gjca: 字符串，用于在原有的敏感字段（如/upload, 初始密码等）基础上添加新的敏感字段，多个字段用逗号分割</li>
+<li>-gjc: 字符串，如果设置，则只使用用户提供的敏感字段进行匹配，默认空（即使用默认的敏感字段）</li>
+</ol>
 <h1 id="v029-250825">v0.29  250825</h1>
 <p>会简单检测sql注入和文件下载漏洞<br />
 <img width="1114" height="486" alt="image" src="https://github.com/user-attachments/assets/e31b51ec-3a6c-4ffd-9b1a-9d35e6a071dc" /><br />
